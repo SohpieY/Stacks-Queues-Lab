@@ -6,5 +6,11 @@ package common;
  */
 @SuppressWarnings("serial")
 public class QueueEmptyException extends Exception {
+    public QueueEmptyException() {
+        super("Uh oh! Queue is empty!");
+    }
 
+    public QueueEmptyException(String message) {
+        super(message);
+    }
 }
