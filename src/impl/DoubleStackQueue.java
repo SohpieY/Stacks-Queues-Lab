@@ -24,7 +24,7 @@ public class DoubleStackQueue implements IQueue {
         try {
             doubleStack.getFirstStack().push(element);
         } catch (StackOverflowException e) {
-            throw new RuntimeException(e);
+            throw new QueueFullException("Queue is full");
         }
     }
 

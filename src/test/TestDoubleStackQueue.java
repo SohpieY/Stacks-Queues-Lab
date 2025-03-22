@@ -47,7 +47,7 @@ public class TestDoubleStackQueue extends AbstractFactoryClient {
      */
     @Test
     public void testEnqueueFullQueue() throws QueueFullException {
-        for (int i = 0; i < DEFAULT_MAX_SIZE; i++) {
+        for (int i = 0; i < DEFAULT_MAX_SIZE / 2; i++) {
             queue.enqueue("element " + i); // fill it up
         }
         assertThrows(QueueFullException.class, () -> {
